@@ -1,0 +1,15 @@
+Port 22 
+Protocol 2 
+HostKey /etc/ssh/ssh_host_rsa_key 
+SyslogFacility AUTHPRIV 
+AllowUsers sshd 
+PermitRootLogin yes 
+RSAAuthentication yes
+PubkeyAuthentication yes
+AuthorizedKeysFile /root/.ssh/authorized_keys 
+PermitEmptyPasswords yes 
+PasswordAuthentication no 
+ChallengeResponseAuthentication no 
+TCPKeepAlive yes 
+MaxAuthTries 5 
+Subsystem sftp /usr/bin/sftp-server
